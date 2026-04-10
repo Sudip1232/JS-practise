@@ -6,17 +6,22 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Web Site</h1>
+    <h1>Chai aur code</h1>
     <button id="stop">Stop</button>
 </body>
 <script>
-    const saySudip = function(){
-        console.log("Sudip");
+    const sayHitesh = function(){
+        console.log("Hitesh");
     }
     const changeText = function(){
         document.querySelector('h1').innerHTML = "best JS series"
     }
 
+    const changeMe = setTimeout(changeText, 2000)
 
+    document.querySelector('#stop').addEventListener('click', function(){
+        clearTimeout(changeMe)
+        console.log("STOPPED")
+    })
 </script>
 </html>
